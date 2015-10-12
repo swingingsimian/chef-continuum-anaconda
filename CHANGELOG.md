@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.6.1
+
+TODO:
+- add prebuilt conda environments
+- add pip no virtualenv
+- fix damn release issue
+
 ## 0.6.0
 
 **This is a backwards-INCOMPATIBLE release**
