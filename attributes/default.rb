@@ -1,15 +1,15 @@
 # for miniconda this must be 'latest'
-default.anaconda.version = '2.3.0'
+default['anaconda']['version'] = '2.3.0'
 # the version of python: either 'python2' or 'python3'
-default.anaconda.python = 'python2'
+default['anaconda']['python'] = 'python2'
 # the architecture: nil to autodetect, or either 'x86' or 'x86_64'
-default.anaconda.flavor = nil
+default['anaconda']['flavor'] = nil
 # either 'anaconda' or 'miniconda'
-default.anaconda.install_type = 'anaconda'
+default['anaconda']['install_type'] = 'anaconda'
 # add system-wide path to profile.d?
-default.anaconda.system_path = false
+default['anaconda']['system_path'] = false
 
-default.anaconda.installer_info = {
+default['anaconda']['installer_info'] = {
   'anaconda' => {
     '2.2.0' => {
       'python2' => {
@@ -65,20 +65,20 @@ default.anaconda.installer_info = {
 }
 
 # specific versions are installed _under_ this directory
-default.anaconda.install_root = '/opt/anaconda'
-default.anaconda.accept_license = 'no'
-default.anaconda.package_logfile = nil
+default['anaconda']['install_root'] = '/opt/anaconda'
+default['anaconda']['accept_license'] = 'no'
+default['anaconda']['package_logfile'] = nil
 
-default.anaconda.owner = 'anaconda'
-default.anaconda.group = 'anaconda'
-default.anaconda.home = "/home/#{node.anaconda.owner}"
+default['anaconda']['owner'] = 'anaconda'
+default['anaconda']['group'] = 'anaconda'
+default['anaconda']['home'] = "/home/#{node['anaconda']['owner']}"
 
-default.anaconda.notebook = {
+default['anaconda']['notebook'] = {
   # by default, listens on all interfaces; there will be a warning since
   # security is disabled
   'ip' => '*',
   'port' => 8888,
-  'owner' => node.anaconda.owner,
-  'group' => node.anaconda.group,
+  'owner' => node['anaconda']['owner'],
+  'group' => node['anaconda']['group'],
   'install_dir' => '/opt/ipython/server',
 }
